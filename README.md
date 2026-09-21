@@ -2,4 +2,4 @@
 
 minimal personal site
 
-live: [nerma](nerma00-lime.vercel.app)
+live: [nerma](https://nerma00-lime.vercel.app)
