@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme/provider";
 
@@ -19,20 +20,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${figtree.variable} h-full antialiased`}
+      className={`${figtree.variable} antialiased`}
     >
       <body className="flex min-h-dvh flex-col">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="mx-auto flex w-full max-w-xl flex-1 flex-col px-6 pb-10 pt-6 sm:pt-12">
+        <div className="mx-auto flex w-full max-w-xl flex-1 flex-col px-6 py-6 sm:py-12">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
             <main>{children}</main>
             <Footer />
-          </div>
-        </ThemeProvider>
+          </ThemeProvider>
+          <Analytics />
+        </div>
       </body>
     </html>
   );
