@@ -15,10 +15,7 @@ export function Footer() {
           className="flex justify-end items-start gap-3"
         />
         <div className="mt-3 text-xs text-muted/70 flex justify-end items-start gap-3">
-          <Link
-            href="/"
-            className="transition-colors hover:text-foreground"
-          >
+          <Link href="/" className="transition-colors hover:text-foreground">
             home
           </Link>
           <Link

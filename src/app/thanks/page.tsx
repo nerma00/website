@@ -1,4 +1,4 @@
-import { TextLink } from "@/components/ui/link";
+import { TextLink } from "@/components/ui/text-link";
 
 type Reference = {
   label: string;

@@ -3,7 +3,6 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme/provider";
-import { ThemeToggle } from "@/components/theme/toggle";
 
 const figtree = Figtree({
   variable: "--font-figtree",

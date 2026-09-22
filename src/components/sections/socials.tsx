@@ -1,4 +1,4 @@
-import type { Social } from "@/lib/constants";
+import type { Social } from "@/lib/types";
 
 type SocialsProps = {
   socials: readonly Social[];
