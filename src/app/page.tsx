@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import { AgeTooltip } from "@/components/sections/age";
 import { ThemeToggle } from "@/components/theme/toggle";
+import { AnimatedText } from "@/components/ui/animated-text";
 import { TextLink } from "@/components/ui/text-link";
 import { BIRTHDAY } from "@/lib/constants";
 import { getAgeInYears } from "@/lib/date";
-import {AnimatedText} from "@/components/ui/animated-text";
 
 export default function Home() {
   const [age, setAge] = useState<number | null>(null);
@@ -31,7 +31,10 @@ export default function Home() {
             <h1 className="text-2xl font-semibold leading-tight text-accent">
               Nikita
             </h1>
-            <AnimatedText text="software engineer" className="mt-0.5 text-sm text-muted" />
+            <AnimatedText
+              text="software engineer"
+              className="mt-0.5 text-sm text-muted"
+            />
           </div>
           <ThemeToggle />
         </div>
