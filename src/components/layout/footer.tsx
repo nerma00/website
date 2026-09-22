@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Socials } from "@/components/socials";
+import { Socials } from "@/components/sections/socials";
 import { SOCIALS } from "@/lib/constants";
 
 export function Footer() {
@@ -15,7 +15,10 @@ export function Footer() {
           className="flex justify-end items-start gap-3"
         />
         <div className="mt-3 text-xs text-muted/70 flex justify-end items-start gap-3">
-          <Link href="/" className="transition-colors hover:text-foreground">
+          <Link
+            href="/"
+            className="transition-colors hover:text-foreground"
+          >
             home
           </Link>
           <Link

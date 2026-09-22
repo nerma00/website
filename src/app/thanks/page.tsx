@@ -1,4 +1,4 @@
-import { TextLink } from "@/components/link";
+import { TextLink } from "@/components/ui/link";
 
 type Reference = {
   label: string;
@@ -32,7 +32,9 @@ const REFERENCES: readonly Reference[] = [
 export default function Thanks() {
   return (
     <div className="text-sm leading-tight text-foreground">
-      <h1 className="text-2xl font-semibold leading-tight text-white">Thanks</h1>
+      <h1 className="text-2xl font-semibold leading-tight text-accent">
+        Thanks
+      </h1>
       <p className="mt-0.5">
         When creating the design, I used existing websites created by others:
       </p>
