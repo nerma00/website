@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AgeTooltip } from "@/components/age";
-import { TextLink } from "@/components/link";
+import { AgeTooltip } from "@/components/sections/age";
+import { TextLink } from "@/components/ui/link";
 import { BIRTHDAY } from "@/lib/constants";
 import { getAgeInYears } from "@/lib/date";
+import {ThemeToggle} from "@/components/theme/toggle";
 
 export default function Home() {
   const [age, setAge] = useState<number | null>(null);
@@ -24,11 +25,14 @@ export default function Home() {
   return (
     <main className="flex flex-1 items-center">
       <div className="space-y-12">
-        <div>
-          <h1 className="text-2xl font-semibold leading-tight text-white">
-            Nikita
-          </h1>
-          <p className="mt-0.5 text-sm text-muted">software engineer</p>
+        <div className="flex justify-between items-start">
+          <div>
+            <h1 className="text-2xl font-semibold leading-tight text-accent">
+              Nikita
+            </h1>
+            <p className="mt-0.5 text-sm text-muted">software engineer</p>
+          </div>
+          <ThemeToggle />
         </div>
         <div className="text-base leading-tight">
           Hi! I’m Nikita from the{" "}
@@ -38,7 +42,9 @@ export default function Home() {
           , and I’m{" "}
           <span className="group/age relative inline-block cursor-help">
             {age === null ? (
-              <span className="inline-block w-[2ch] animate-pulse text-center">99</span>
+              <span className="inline-block w-[2ch] animate-pulse text-center">
+                99
+              </span>
             ) : (
               <span className="inline-block w-[2ch] text-center tabular-nums">
                 {Math.floor(age)}
