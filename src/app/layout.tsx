@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="mx-auto flex w-full max-w-xl flex-1 flex-col px-6 pb-10 pt-24 sm:pt-32">
+          <div className="mx-auto flex w-full max-w-xl flex-1 flex-col px-6 pb-10 pt-6 sm:pt-12">
             <main>{children}</main>
             <Footer />
           </div>
